@@ -66,7 +66,6 @@
     <img src="figures/overview.png" alt="" align="center" width="700px" />
 </p>
 
-> **Personal note:** I'm studying this repo to understand how the hierarchical tokenizer handles OHLCV normalization across different exchanges with varying price scales. The two-stage pre-training approach is particularly interesting for crypto markets.
-
-## ✨ Live Demo 
-We have set up a live demo to visualize Kronos
+> **Personal note:** I'm studying this repo to understand how the hierarchical tokenizer works,
+> particularly how OHLCV data is discretized. My focus is on applying this to crypto markets.
+> Key files to read first: `tokenizer/`, then `model/pretrain.py`.
