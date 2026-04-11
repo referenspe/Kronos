@@ -66,6 +66,8 @@
     <img src="figures/overview.png" alt="" align="center" width="700px" />
 </p>
 
-> **Personal note:** I'm studying this repo to understand how foundation models can be applied to financial time series.
-> My focus is on the tokenization stage (step 1) — specifically how OHLCV data gets mapped to discrete tokens.
-> See my notes in `notes/tokenizer_study.md` as I work through the code.
+> **Personal note:** I'm studying this repo to understand how
+> the hierarchical tokenizer works for OHLCV data. My main focus is on
+> the two-stage pre-training pipeline and how it handles the high-noise
+> nature of financial time series — particularly whether the discrete
+> token vocabulary generalizes across different exchanges and asset classes.
