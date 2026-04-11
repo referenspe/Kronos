@@ -66,6 +66,6 @@
     <img src="figures/overview.png" alt="" align="center" width="700px" />
 </p>
 
-> **Personal note:** I'm studying this repo to understand how the hierarchical tokenizer works,
-> particularly how OHLCV data is discretized. My focus is on applying this to crypto markets.
-> Key files to read first: `tokenizer/`, then `model/pretrain.py`.
+> **Personal note:** I'm studying this repo to understand how foundation models can be applied to financial time series.
+> My focus is on the tokenization stage (step 1) — specifically how OHLCV data gets mapped to discrete tokens.
+> See my notes in `notes/tokenizer_study.md` as I work through the code.
