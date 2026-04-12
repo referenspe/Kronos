@@ -57,6 +57,7 @@ x_timestamp = df.loc[:lookback-1, 'timestamps']
 y_timestamp = df.loc[lookback:lookback+pred_len-1, 'timestamps']
 
 # 4. Make Prediction
+# Note: increased sample_count to 5 to get more stable predictions via averaging
 pred_df = predictor.predict(
     df=x_df,
     x_timestamp=x_timestamp,
@@ -64,7 +65,7 @@ pred_df = predictor.predict(
     pred_len=pred_len,
     T=1.0,
     top_p=0.9,
-    sample_count=1,
+    sample_count=5,
     verbose=True
 )
 
@@ -77,4 +78,3 @@ kline_df = df.loc[:lookback+pred_len-1]
 
 # visualize
 plot_prediction(kline_df, pred_df)
-
