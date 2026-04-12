@@ -12,6 +12,7 @@ Personal fork notes:
     - Using this for experimenting with stock price forecasting
     - See examples/ directory for usage notebooks
     - Added plot_forecast to default imports for convenience
+    - Added evaluate_forecast to default imports (useful for backtesting)
 """
 
 __version__ = "0.1.0"
@@ -24,6 +25,7 @@ from kronos.utils import (
     normalize_series,
     denormalize_series,
     plot_forecast,  # frequently needed, so importing by default
+    evaluate_forecast,  # added for backtesting workflows
 )
 
 __all__ = [
@@ -32,4 +34,5 @@ __all__ = [
     "normalize_series",
     "denormalize_series",
     "plot_forecast",
+    "evaluate_forecast",
 ]
