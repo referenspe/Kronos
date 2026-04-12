@@ -11,6 +11,7 @@ Modules:
 Personal fork notes:
     - Using this for experimenting with stock price forecasting
     - See examples/ directory for usage notebooks
+    - Added plot_forecast to default imports for convenience
 """
 
 __version__ = "0.1.0"
@@ -22,6 +23,7 @@ from kronos.utils import (
     prepare_time_series,
     normalize_series,
     denormalize_series,
+    plot_forecast,  # frequently needed, so importing by default
 )
 
 __all__ = [
@@ -29,4 +31,5 @@ __all__ = [
     "prepare_time_series",
     "normalize_series",
     "denormalize_series",
+    "plot_forecast",
 ]
