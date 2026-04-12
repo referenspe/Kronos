@@ -66,6 +66,7 @@
     <img src="figures/overview.png" alt="" align="center" width="700px" />
 </p>
 
-> **Personal note:** I'm studying this repo to understand how the hierarchical tokenizer works, particularly
-> how OHLCV data gets discretized. My main interest is applying this to crypto market data from Binance.
-> TODO: experiment with fine-tuning on BTC/USDT 1h candles and compare against a simple LSTM baseline.
+> **Personal note:** I'm studying this repo to understand how foundation models can be applied to
+> financial time series. My main interest is in the tokenization stage — specifically how OHLCV
+> data gets quantized into discrete tokens. I plan to experiment with applying this to crypto
+> markets (Binance data) since that's what I have easy access to.
