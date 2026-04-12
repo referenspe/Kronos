@@ -66,8 +66,6 @@
     <img src="figures/overview.png" alt="" align="center" width="700px" />
 </p>
 
-> **Personal note:** I'm studying this repo to understand how
-> the hierarchical tokenizer works for OHLCV data. My main focus is on
-> the two-stage pre-training pipeline and how it handles the high-noise
-> nature of financial time series — particularly whether the discrete
-> token vocabulary generalizes across different exchanges and asset classes.
+> **Personal note:** I'm studying this repo to understand how the hierarchical tokenizer works, particularly
+> how OHLCV data gets discretized. My main interest is applying this to crypto market data from Binance.
+> TODO: experiment with fine-tuning on BTC/USDT 1h candles and compare against a simple LSTM baseline.
