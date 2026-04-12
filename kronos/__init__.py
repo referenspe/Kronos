@@ -1,5 +1,4 @@
-"""
-Kronos - Time Series Prediction Library
+"""Kronos - Time Series Prediction Library
 
 A fork of shiyu-coder/Kronos providing tools for time series forecasting,
 particularly suited for financial market data.
@@ -8,6 +7,10 @@ Modules:
     model: Core Kronos prediction model
     utils: Utility functions for data preparation and visualization
     data: Data loading and preprocessing tools
+
+Personal fork notes:
+    - Using this for experimenting with stock price forecasting
+    - See examples/ directory for usage notebooks
 """
 
 __version__ = "0.1.0"
