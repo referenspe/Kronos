@@ -14,15 +14,21 @@ def plot_prediction(kline_df, pred_df):
 
     close_df = pd.concat([sr_close, sr_pred_close], axis=1)
 
-    fig, ax = plt.subplots(1, 1, figsize=(8, 4))
+    fig, ax = plt.subplots(1, 1, figsize=(10, 5))
 
     ax.plot(close_df['Ground Truth'], label='Ground Truth', color='blue', linewidth=1.5)
     ax.plot(close_df['Prediction'], label='Prediction', color='red', linewidth=1.5)
     ax.set_ylabel('Close Price', fontsize=14)
+    # Mark the boundary between historical context and prediction
+    boundary_idx = close_df.index[close_df['Prediction'].first_valid_index() == close_df.index].tolist()
+    if boundary_idx:
+        ax.axvline(x=boundary_idx[0], color='gray', linestyle='--', linewidth=1.0, label='Forecast Start')
+    ax.set_title('Kronos Price Forecast', fontsize=15)
     ax.legend(loc='lower left', fontsize=12)
     ax.grid(True)
 
     plt.tight_layout()
+    plt.savefig("prediction_output.png", dpi=150)
     plt.show()
 
 
