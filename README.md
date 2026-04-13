@@ -66,7 +66,6 @@
     <img src="figures/overview.png" alt="" align="center" width="700px" />
 </p>
 
-> **Personal note:** I'm studying this repo to understand how foundation models can be applied to
-> financial time series. My main interest is in the tokenization stage — specifically how OHLCV
-> data gets quantized into discrete tokens. I plan to experiment with applying this to crypto
-> markets (Binance data) since that's what I have easy access to.
+> **Personal note:** I'm studying this repo to understand how foundation models can be applied to financial time series.
+> My focus is on the tokenization stage — specifically how OHLCV data gets quantized into discrete tokens.
+> See my notes in `notes/tokenizer_study.md` as I work through the code.
