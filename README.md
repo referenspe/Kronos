@@ -66,6 +66,6 @@
     <img src="figures/overview.png" alt="" align="center" width="700px" />
 </p>
 
-> **Personal note:** I'm studying this repo to understand how foundation models can be applied to financial time series.
-> My focus is on the tokenization stage — specifically how OHLCV data gets quantized into discrete tokens.
-> See my notes in `notes/tokenizer_study.md` as I work through the code.
+> **Personal note:** I'm studying this repo to understand how the hierarchical tokenizer works,
+> particularly the VQ-VAE codebook training. My main focus is on adapting the fine-tuning
+> pipeline for crypto markets (specifically Binance spot data). Notes in `my_notes/` directory.
