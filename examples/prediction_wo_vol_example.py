@@ -52,8 +52,8 @@ x_timestamp = df.loc[:lookback-1, 'timestamps']
 y_timestamp = df.loc[lookback:lookback+pred_len-1, 'timestamps']
 
 # 4. Make Prediction
-# Increased sample_count to 20 for a more stable averaged prediction;
-# more samples = smoother output but slower inference on CPU.
+# Reduced sample_count from 20 to 10 to speed up inference on CPU;
+# the predictions are still reasonably stable with 10 samples.
 pred_df = predictor.predict(
     df=x_df,
     x_timestamp=x_timestamp,
@@ -61,7 +61,7 @@ pred_df = predictor.predict(
     pred_len=pred_len,
     T=0,
     top_p=0.9,
-    sample_count=20,
+    sample_count=10,
     verbose=True
 )
 
