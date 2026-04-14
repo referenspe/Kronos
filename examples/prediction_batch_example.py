@@ -53,16 +53,20 @@ df['timestamps'] = pd.to_datetime(df['timestamps'])
 lookback = 400
 pred_len = 120
 
-# Run batch prediction over 5 non-overlapping windows
-# Using step=lookback so windows don't overlap; pred_len window follows immediately after
+# Run batch prediction over non-overlapping windows.
+# Increased num_windows from 5 to 10 to evaluate performance across more of the dataset.
 step = lookback
-num_windows = 5
+num_windows = 10
 
 dfs = []
 xtsp = []
 ytsp = []
 for i in range(num_windows):
     start = i * step
+    # Guard against windows that exceed the available data
+    if start + lookback + pred_len > len(df):
+        print(f"Window {i} exceeds dataset length, stopping early.")
+        break
     idf = df.loc[start:(start + lookback - 1), ['open', 'high', 'low', 'close', 'volume', 'amount']]
     i_x_timestamp = df.loc[start:(start + lookback - 1), 'timestamps']
     i_y_timestamp = df.loc[(start + lookback):(start + lookback + pred_len - 1), 'timestamps']
