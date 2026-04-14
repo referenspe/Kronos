@@ -44,7 +44,9 @@ predictor = KronosPredictor(model, tokenizer, device="cpu", max_context=512)
 df = pd.read_csv("./data/XSHG_5min_600977.csv")
 df['timestamps'] = pd.to_datetime(df['timestamps'])
 
-lookback = 400
+# Using a shorter lookback window (256 instead of 400) to reduce inference
+# time on CPU while still providing enough context for the model.
+lookback = 256
 pred_len = 120
 
 x_df = df.loc[:lookback-1, ['open', 'high', 'low', 'close']]
