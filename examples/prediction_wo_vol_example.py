@@ -58,12 +58,15 @@ y_timestamp = df.loc[lookback:lookback+pred_len-1, 'timestamps']
 # 4. Make Prediction
 # Reduced sample_count from 20 to 10 to speed up inference on CPU;
 # the predictions are still reasonably stable with 10 samples.
+# Note: setting T=0.1 instead of 0 adds a tiny bit of stochasticity, which
+# I find produces slightly more realistic-looking forecast paths than pure
+# greedy decoding while still being fairly deterministic.
 pred_df = predictor.predict(
     df=x_df,
     x_timestamp=x_timestamp,
     y_timestamp=y_timestamp,
     pred_len=pred_len,
-    T=0,
+    T=0.1,
     top_p=0.9,
     sample_count=10,
     verbose=True
