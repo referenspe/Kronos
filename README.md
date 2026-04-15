@@ -67,5 +67,5 @@
 </p>
 
 > **Personal note:** I'm studying this repo to understand how the hierarchical tokenizer works,
-> particularly the VQ-VAE codebook training. My main focus is on adapting the fine-tuning
-> pipeline for crypto markets (specifically Binance spot data). Notes in `my_notes/` directory.
+> particularly the VQ-VAE stage. My focus is on adapting the fine-tuning pipeline for
+> crypto markets (Binance spot data). Notes tracked in `docs/personal_notes.md`.
