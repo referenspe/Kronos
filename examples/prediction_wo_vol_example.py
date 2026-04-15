@@ -76,6 +76,11 @@ pred_df = predictor.predict(
 print("Forecasted Data Head:")
 print(pred_df.head())
 
+# Also print basic stats for the forecasted close prices — useful for a
+# quick sanity check that the predictions are in a reasonable range.
+print("\nForecast Close Price Stats:")
+print(pred_df['close'].describe())
+
 # Combine historical and forecasted data for plotting
 kline_df = df.loc[:lookback+pred_len-1]
 
