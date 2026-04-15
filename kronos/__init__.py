@@ -14,6 +14,7 @@ Personal fork notes:
     - Added plot_forecast to default imports for convenience
     - Added evaluate_forecast to default imports (useful for backtesting)
     - Bumped version to 0.1.1 to track my local changes
+    - Added load_csv_series to default imports (tired of importing it manually)
 """
 
 __version__ = "0.1.1"  # local fork version
@@ -28,6 +29,7 @@ from kronos.utils import (
     plot_forecast,  # frequently needed, so importing by default
     evaluate_forecast,  # added for backtesting workflows
 )
+from kronos.data import load_csv_series  # saves a repetitive import in every script
 
 __all__ = [
     "KronosModel",
@@ -36,4 +38,5 @@ __all__ = [
     "denormalize_series",
     "plot_forecast",
     "evaluate_forecast",
+    "load_csv_series",
 ]
