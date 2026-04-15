@@ -47,7 +47,9 @@ df['timestamps'] = pd.to_datetime(df['timestamps'])
 # Using a shorter lookback window (256 instead of 400) to reduce inference
 # time on CPU while still providing enough context for the model.
 lookback = 256
-pred_len = 120
+# Reduced pred_len to 60 (from 120) — forecasting 60 bars is more than enough
+# for my use case and cuts inference time roughly in half on CPU.
+pred_len = 60
 
 x_df = df.loc[:lookback-1, ['open', 'high', 'low', 'close']]
 x_timestamp = df.loc[:lookback-1, 'timestamps']
